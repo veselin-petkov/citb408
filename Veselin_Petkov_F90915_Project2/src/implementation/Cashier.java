@@ -1,4 +1,4 @@
-package receipts;
+package implementation;
 
 public class Cashier {
   private final int numberID;

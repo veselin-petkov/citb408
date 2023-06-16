@@ -1,23 +1,20 @@
-package receipts;
+package implementation;
 
-public class Item {
+import java.time.Instant;
+
+public class Goods {
   private final int numberID;
   private String name;
   private double price;
-  private String date;
-  private int count;
+  private Instant dateOfExpire;
+  private int quantity;
 
-  public Item(int numberID, String name) {
-    this.numberID = numberID;
-    this.name = name;
-  }
-
-  public Item(int numberID, String name, double price, String date, int count) {
+  public Goods(int numberID, String name, double price, Instant dateOfExpire, int quantity) {
     this.numberID = numberID;
     this.name = name;
     this.price = price;
-    this.date = date;
-    this.count = count;
+    this.dateOfExpire = dateOfExpire;
+    this.quantity = quantity;
   }
 
   public String getName() {
@@ -28,8 +25,12 @@ public class Item {
     return price;
   }
 
-  public int getCount() {
-    return count;
+  public int getQuantity() {
+    return quantity;
+  }
+
+  public Instant getDateOfExpire() {
+    return dateOfExpire;
   }
 
   @Override
@@ -38,7 +39,7 @@ public class Item {
            "numberID=" + numberID +
            ", name='" + name + '\'' +
            ", price=" + price +
-           ", date='" + date + '\'' +
+           ", date='" + dateOfExpire + '\'' +
            '}';
   }
 }

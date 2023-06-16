@@ -1,6 +1,6 @@
 Receipt 1
 Cashier Cashier{numberID=1234, name='Ivan'}
 Date 2023-06-16
-ItemList {}
-TotalPrice 0.0
+ItemList {Item{numberID=8, name='Chocolate', price=2.5, date='2024-02-10T00:00:00Z'}=14}
+TotalPrice 35.0
 Total Value Of Receipts 1

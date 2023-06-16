@@ -1,4 +1,4 @@
-package receipts;
+package implementation;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -14,7 +14,7 @@ public class Receipt implements Payment {
   private static int number = 1;
   private Cashier cashier;
   private LocalDate date;
-  private HashMap<Item, Integer> itemList = new HashMap<>();
+  private HashMap<Goods, Integer> itemList = new HashMap<>();
   private double totalPrice;
 
   public Receipt() {
@@ -22,7 +22,7 @@ public class Receipt implements Payment {
   }
 
 
-  public Receipt(Cashier cashier, HashMap<Item, Integer> itemList) {
+  public Receipt(Cashier cashier, HashMap<Goods, Integer> itemList) {
     this.num = number;
     this.cashier = cashier;
     this.date = LocalDate.now();
@@ -65,12 +65,9 @@ public class Receipt implements Payment {
 
   @Override
   public double payment() {
-    double sum = 0;
-    for (Item item : itemList.keySet()) {
-      int value = itemList.get(item);
-      sum += item.getPrice() * value;
-    }
-    return sum;
+    return itemList.entrySet().stream()
+        .mapToDouble(item -> item.getKey().getPrice() * item.getValue())
+        .sum();
   }
 
   @Override
