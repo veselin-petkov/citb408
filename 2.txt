@@ -1,0 +1,6 @@
+Receipt 2
+Cashier Cashier{numberID=1234, name='Ivan'}
+Date 2023-06-16
+ItemList {Item{numberID=15, name='Milk', price=1.8, date='20/09/2020'}=7, Item{numberID=8, name='Chocolate', price=2.5, date='10/02/2022'}=3, Item{numberID=12, name='Meat', price=12.6, date='12/06/2021'}=1}
+TotalPrice 32.7
+Total Value Of Receipts 2

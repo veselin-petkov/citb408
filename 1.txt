@@ -1,0 +1,6 @@
+Receipt 1
+Cashier Cashier{numberID=1234, name='Ivan'}
+Date 2023-06-16
+ItemList {}
+TotalPrice 0.0
+Total Value Of Receipts 1
